@@ -1,0 +1,75 @@
+
+	<head>
+		<meta charset="utf-8">
+		<title>RegistrationForm_v10 by Colorlib</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	
+
+		<link rel="stylesheet" href="assets/css/style.css">
+	
+<style>
+    body{
+        
+        background-image: linear-gradient(to bottom, blue , blueviolet);
+    }
+
+    </style>
+        </head>
+        <nav  class="navbar navbar-expand-sm " style="background-color: maroon;" > 
+            <a href="/" ><h1 class="active" style="margin:20px;"><font style="color:white;">Ta </font></h1></a> -->
+          <div class="navbar-collapse collapse" id="navbarCustom">
+              
+              <ul class="navbar-nav"> 
+             
+        
+                  <li class="nav-item ">
+                  <b>   <a class="nav-link" routerLink="/adminpage" ><font style="color: white">Home</font></a>
+                  </b>  </li>
+               
+             
+            <li class="nav-item ">
+                  <b>   <a class="nav-link" routerLink="/adminpage" ><font style="color: white">Welcome {{name}}</font></a>
+                  </b>  </li>
+              </ul>
+              
+          </div>
+        </nav>
+        <div *ngFor="let user of  userdata ,index as id">
+        
+        <div class="wrapper">
+                <div class="inner">
+                    <img src="assets/images/image-1.png" alt="" class="image-1">
+                    <form #f1="ngForm" (ngSubmit)="updateuser(f1.value)">
+                            <div class="form-holder">
+                                    <span class="glyphicon-user"></span>
+                                    <input type="text" class="form-control" placeholder="Username" value="{{user.name}}" name="name"  >
+                                    <!-- <label value={{user.name}} ></label> -->
+                                </div>
+                        <div class="form-holder">
+                            <span class="lnr lnr-phone-handset"></span>
+                            <input type="text" class="form-control" placeholder="Phone Number"name="mobileno" value={{user.mobileno}} >
+                        </div>
+                        
+					<div class="form-holder">
+                            <span class="lnr lnr-envelope"></span>
+                            <input type="text" class="form-control" placeholder="Mail" name="email" value="{{user.email}}" >
+                        </div>
+    
+                        <a routerLink="/viewaccount">
+                        <button >
+                            <span>Back</span>
+                        </button>
+                    </a>
+                    </form>
+                    <img src="assets/images/image-2.png" alt="" class="image-2">
+                </div>
+                
+            </div>
+            
+
+      
+            
+               </div> 
+
+	

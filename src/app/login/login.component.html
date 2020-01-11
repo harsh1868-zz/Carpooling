@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Login</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- 	
+		<link rel="stylesheet" href="assets/fonts/linearicons/style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="assets/header.html"></script>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+		<link rel="stylesheet" href="assets/css/style.css">
+
+<style>
+   body {
+  background-image: linear-gradient(to bottom, blue , blueviolet);
+}
+nav
+{
+	background-image:linear-gradient(to left,#ff7900,yellow)
+}
+    </style>
+        </head>
+
+        <body >
+                <app-header></app-header>
+
+ 
+<div class="wrapper">
+			<div class="inner">
+				<img src="assets/images/image-1.png" alt="" class="image-1">
+				<form #f3="ngForm" (ngSubmit)="Login(f3.value)"  >
+					<h3>Login</h3>
+					<div class="form-holder">
+						<span class="lnr lnr-user"></span>
+						<input type="text" class="form-control" placeholder="Username" required #fname="ngModel" name="name" ngModel minlength="3" maxlength="10" pattern="[a-zA-Z]*" >
+                        <div *ngIf="fname.invalid && (fname.dirty || fname.untouched)">
+                                <div *ngIf="fname.errors.required">
+                                    <h6><p class="text-danger">* FirstName is required.</p></h6>
+                                </div>
+                                <div *ngIf="fname.errors.pattern">
+                                    <h6><p class="text-danger">* FirstName should contain only characters.</p></h6>
+                                </div>
+                                <div *ngIf="fname.errors.minlength">
+                                    <h6><p class="text-danger">* FirstName must be at least 3 characters.</p></h6>
+                                </div>
+                             </div>
+                        </div>
+
+
+
+                        <!-- Email Verification -->
+					<div class="form-holder">
+						<span class="lnr lnr-envelope"></span>
+						<input type="text" class="form-control" placeholder="Mail" name="email" required ngModel class="form-control" #email="ngModel" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+                        <div *ngIf="email.invalid && (email.dirty || email.untouched)">
+                                <div *ngIf="email.errors.required">
+                                    <h6><p class="text-danger">* Email is required.</p></h6>
+                                </div>
+                                <div *ngIf="email.errors.pattern">
+                                    <h6><p class="text-danger">* Email must be in valid form.</p></h6>
+                                </div>
+                             </div>
+                    </div>
+                    
+
+                    
+					<div class="form-holder">
+						<span class="lnr lnr-lock"></span>
+						<input type="password" placeholder="Enter Password" name="password" required ngModel class="form-control" #psd="ngModel">
+          <div *ngIf = "psd.invalid && (psd.dirty || psd.untouched)">
+                <div *ngIf="psd.errors.required">
+                   <h6><p class="text-danger">* Password is required.</p></h6>
+                </div>
+          </div>
+                    </div>
+                    <button type="submit" [disabled]=!this.f3.valid>Login</button>
+       
+				</form>
+				<img src="assets/images/image-2.png" alt="" class="image-2">
+			</div>
+			
+		</div>
+		
+	</body>
+</html>

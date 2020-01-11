@@ -1,0 +1,47 @@
+
+
+<nav  class="navbar navbar-expand-sm " style="background-color: maroon;" >
+        <a href="/" ><h1 class="active" style="margin:20px;"><font style="color:white;">Ta </font></h1></a>
+      <div class="navbar-collapse collapse" id="navbarCustom">
+          
+          <ul class="navbar-nav"> 
+<li class="nav-item " *ngIf="myItem!=null">
+ <b>  <a class="nav-link" routerLink="/home" ><font style="color: white">Welcome  {{myItem}}</font></a>
+ </b>
+</li>
+         
+
+              <li class="nav-item ">
+              <b>   <a class="nav-link" routerLink="/home" ><font style="color: white">Home</font></a>
+              </b>  </li>
+           
+              <li class="nav-item" *ngIf="myItem==null">
+                    <b>   <a class="nav-link" routerLink="/login" ><font style="color: white">Login</font></a>
+            
+                </b>     </li>
+              <li class="nav-item" *ngIf="myItem==null">
+                    <b>   <a class="nav-link" routerLink="/register"><font style="color: white">Register</font></a>
+                </b>   </li>
+              <li class="nav-item" *ngIf="myItem!=null">
+                    <b>   <a class="nav-link" routerLink="/logout"><font style="color: white">Logout</font></a>
+                </b> </li>
+                <li class="nav-item" *ngIf="myItem!=null">
+                        <b>
+            <a class="nav-link"  routerLink="/pastride"  ><font style="color: white">Past Ride</font></a>
+        </b> 
+        </li>
+        <li class="nav-item" *ngIf="myItem!=null">
+          <b>
+<a class="nav-link"  routerLink="/bookrec"  ><font style="color: white">Offered by you</font></a>
+</b> 
+</li>
+              <li class="nav-item">
+                    <b>   <a class="nav-link" routerLink="/aboutus"><font style="color: white">AboutUs</font></a>
+                </b>  </li>
+          
+   
+          </ul>
+          
+      </div>
+    </nav>
+

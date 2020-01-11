@@ -1,0 +1,127 @@
+
+    <head>
+        
+   
+  
+    
+         <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" crossorigin="anonymous"> 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"  crossorigin="anonymous"></script>
+
+    </head>
+
+<body>
+    
+   
+    <app-header></app-header>
+
+
+    <form #f2="ngForm" (ngSubmit)="offer(f2.value)">    
+<div class="row">
+
+  <div class="col-sm-1"></div>
+  <div class="col-sm-4">
+
+    <div class="card card-cascade narrower">
+
+      <div class="view view-cascade gradient-card-header blue-gradient">
+        <h5 class="mb-0">Source</h5>
+      </div>
+      <div class="card-body card-body-cascade text-center">
+
+<div id="myMap"></div><br/>
+      </div>
+
+ 
+    </div>
+<div>
+    <!-- <form #f2="ngForm" (ngSubmit)="offer(f2.value)"> -->
+            <input id="address"  type="text" style="width:490px;" name="source" ngModel/>
+          <br/>
+            <!-- <input type= "text" id="latitude" placeholder="sLatitude" />
+            <input type="text" id="longitude" placeholder="sLongitude"/> -->
+
+            
+
+    <!-- <button id="b1"  class="btn " style="margin: 20px;size: 100px">Submit Source</button>
+</form> -->
+
+</div>
+  </div>
+
+  <div class="col-sm-1"></div>
+  <div class="col-sm-4">
+
+    <div class="card card-cascade narrower">
+
+      <div class="view view-cascade gradient-card-header blue-gradient">
+        <h5 class="mb-0">Destination</h5>
+      </div>
+      <div class="card-body card-body-cascade text-center">
+
+<!--
+        <div id="map-container-google-9" class="z-depth-1-half map-container-5" style="height: 300px">
+          <iframe src="https://maps.google.com/maps?q=Madryt&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+            style="border:0" allowfullscreen></iframe>
+        </div>
+-->
+<div id="myMap1"></div><br/>
+        
+      </div>
+
+ 
+    </div>
+<div>
+            <input id="address2"  type="text" style="width:490px;" name="destination" ngModel/>
+            <br/>
+            <!-- <input type="text" id="latitude2" placeholder="dLatitude" />
+            <input type="text" id="longitude2" placeholder="dLongitude"/> -->
+
+
+        </div>
+    <!--  -->
+
+  </div>
+
+</div>
+    <div style="justify-content: center">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-3">
+             
+               Date <input type="Date" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Date" name="date" ngModel>
+         
+            
+                <!-- <form class="form" style="width: 300px">
+  <label class="sr-only" for="inlineFormInput">Name</label>
+  <input type="Date" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Date">
+  
+ 
+  <button type="submit" style="margin:20px" class="btn btn-primary">Submit</button>
+</form> -->
+        </div>
+
+        <div class="col-sm-2"></div>
+        <div class="col-sm-3">
+            Fare
+            <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Enter Fare in Rupee" name="fare" ngModel>
+
+      
+        </div>
+        <div class="col-sm-3"></div>
+         </div>
+            </div>
+
+                <div style="justify-content: center">
+                    <div class="row">
+                  <div class="col-sm-4"></div>
+                  <div class="col-sm-4">
+                  <button id="b1"  class="btn "   style="margin: 20px;size: 100px">Submit Source</button>
+                </div>
+                  <div class="col-sm-4"></div>
+                </div>
+                </div>
+
+            </form>

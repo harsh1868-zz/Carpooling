@@ -1,0 +1,32 @@
+
+.map-container-5{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    }
+    .map-container-5 iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+    }
+    button:hover {
+    background-position: right center; /* change the direction of the change here */
+    }
+    
+    body{
+    background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
+    }
+    #b1{
+    background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
+    }
+    #myMap {
+        height: 280px;
+        width: 450px;
+     }
+     #myMap1{
+        height: 280px;
+        width: 450px;
+     }

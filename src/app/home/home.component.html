@@ -1,0 +1,219 @@
+
+<app-header></app-header>
+
+<div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+        <!--Indicators-->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-2" data-slide-to="1"></li>
+          <li data-target="#carousel-example-2" data-slide-to="2"></li>
+        </ol>
+        <!--/.Indicators-->
+        <!--Slides-->
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+            <div class="view">
+          <img class="d-block w-100" src="assets/image/11.png"  height="700" alt="First slide">
+              <div class="mask rgba-black-light"></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+           
+            <div class="view">
+              <img class="d-block w-100" src="assets/image/cp4.jpg" alt="Second slide" width="100%" height="700px">
+              <div class="mask rgba-black-strong"></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="view">
+                <img class="d-block w-100" src="assets/image/cp3.jpg"width="100%" height="700px"alt="Third slide">
+              <div class="mask rgba-black-slight"></div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+</div>
+        
+        <div class="card" style="margin:20px;padding:20px">
+        
+        
+            <div class="card-body elegant-color white-text">
+              <!--Title-->
+              <h4 class="card-title">What is Carpooling?</h4>
+              <p class="card-text white-text" style="float: right" >
+                  <img src="assets/image/download.jpg" style="padding: 20px;width:400px;height: 300px; float:left;clear: right;border-radius: 50px " alt="photo">
+            
+                 {{home.detail}}
+                  
+                  
+              </div>
+        
+          </div>
+        
+        
+        <div class="block centered" style="display:inline">
+          <button class="btn-outline-warning btn-primary " id="b1" style="border-radius:10px;color: red;visibility: hidden" >Offer Ride</button>
+          &nbsp;&nbsp;   <button class="btn-outline-warning btn-primary " id="b1" style="border-radius:10px;color: red;visibility: hidden" >Offer Place</button>
+          
+        </div>
+        
+        
+        <div  class="row">
+        
+        <div class="col-sm-1">
+        </div>
+            <div class="col-sm-4">
+          
+          <div class="card">
+        
+            <div class="view">
+                <img src="assets/image/cp2.jpg" class="card-img-top" alt="photo">
+              <a href="#">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+        
+            <div class="card-body elegant-color white-text">
+              <h4 class="card-title">Don't go anywhere just find here</h4>
+              <p class="card-text white-text">Share your travel cost with our community</p>
+              <a routerLink="/map"><button class="btn" style="border-radius: 15px" >Offer Ride</button></a>
+            </div>
+        
+          </div>
+          
+        </div>
+        
+        
+        
+        <div class="col-sm-2">
+        </div>
+            <div class="col-sm-4">
+        
+          <div class="card">
+        
+        
+            <div class="view">
+                <img src="assets/image/cp2.jpg" class="card-img-top" alt="photo">
+              <a href="#">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+        
+         
+            <div class="card-body elegant-color white-text">
+             
+              <h4 class="card-title">Driving in your car soon?</h4>
+           
+              <p class="card-text white-text">Let's make this your least expensive journey ever.</p>
+              
+            <a routerLink="/liveride">  <button class="btn " id="b2" style="border-radius: 15px;" >Find Ride</button></a>
+            </div>
+        
+          </div>
+        
+        
+        </div>
+        
+        <div class="col-sm-1"></div>
+        
+        
+        </div >
+        <div class="card " style="display: block;">
+        
+        
+            <div class="card-body elegant-color white-text">
+              <!--Title-->
+              <h4 class="card-title">
+                Our Famouse Ride
+          </h4>
+            
+                    <br>
+        
+              
+            <section style=" padding: auto;margin: auto;background: linear-gradient(to right, black,brown);">
+             
+              <h1>Famouse Ride </h1>
+              <div class="tbl-header">
+                <table cellpadding="0" cellspacing="0" >
+                
+                </table>
+              </div>
+                <table cellpadding="0" cellspacing="0" >
+                  <tbody>
+                      <tr>
+                          <td ><font size="3">Index</font></td>                      
+                              <td >   <font size="3">Source</font></td>
+                            
+    <!--                        
+                            </div> -->
+                          </tr>
+                          <tr *ngFor="let ride of  ridedata ,index as id"  >
+                              <td >{{id+1}}</td>                      
+                                  <td >   <font size="3">{{ride._id}}</font></td>
+                                <td>  <font size="3">{{ride.destination}}</font></td>
+                                
+        <!--                        
+                                </div> -->
+                              </tr>   
+        
+                  </tbody>
+                </table>
+            
+            </section>
+            
+                  
+                  
+              </div>
+        
+          </div>
+        
+        
+        
+        
+        
+        
+              
+        
+                
+          
+        <section class="text-center my-5">
+        
+        
+        <h2 class="h1-responsive font-weight-bold my-5">Go literally anywhere. From anywhere.</h2>
+          <div class="row">
+        
+          <div class="col-lg-2"></div>
+          <div class="col-lg-2 col-md-12 mb-lg-0 mb-4">
+        
+        <h4 class="font-weight-bold mb-3"><strong>Smart</strong></h4>
+             
+        <p class="dark-grey-text">With access to millions of journeys, you can quickly find people nearby travelling your way.</p>
+        
+          </div>
+        
+          <div class="col-lg-1"></div>
+          <div class="col-lg-2 col-md-12 mb-lg-0 mb-4">
+        
+        <h4 class="font-weight-bold mb-3"><strong>Simple</strong></h4>
+             
+        <p class="dark-grey-text">Enter your exact address to find the perfect ride. Choose who you’d like to travel with. And book! 
+        
+          </div>
+          
+          <div class="col-lg-1"></div>
+          <div class="col-lg-2 col-md-12 mb-lg-0 mb-4">
+        
+        <h4 class="font-weight-bold mb-3"><strong>Seamless</strong></h4>
+             
+        <p class="dark-grey-text">Get to your exact destination, without the hassle. No queues. No waiting around.></p>
+          </div>
+          </div>
+        </section>
+        

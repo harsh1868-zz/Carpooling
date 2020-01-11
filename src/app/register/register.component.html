@@ -1,0 +1,97 @@
+
+	<head>
+		<meta charset="utf-8">
+		<title>RegistrationForm_v10 by Colorlib</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	
+
+		<link rel="stylesheet" href="assets/css/style.css">
+	
+<style>
+    body{
+        background-image: linear-gradient(to bottom, blue , blueviolet);
+    }
+
+    </style>
+        </head>
+
+	<body>
+
+			<app-header></app-header>
+
+
+		<div class="wrapper">
+			<div class="inner">
+				<img src="assets/images/image-1.png" alt="" class="image-1">
+				<form #f1="ngForm" (ngSubmit)="registeruser(f1.value)">
+					<h3>New Account</h3>
+					<div class="form-holder">
+						<span class="glyphicon-user"></span>
+						<input type="text" class="form-control" #fname="ngModel" required placeholder="Username" name="name" ngModel>
+						<div *ngIf="fname.invalid && (fname.dirty || fname.untouched)">
+                                <div *ngIf="fname.errors.required">
+                                    <h6><p class="text-danger">* FirstName is required.</p></h6>
+                                </div>
+                                <div *ngIf="fname.errors.pattern">
+                                    <h6><p class="text-danger">* FirstName should contain only characters.</p></h6>
+                                </div>
+                                <div *ngIf="fname.errors.minlength">
+                                    <h6><p class="text-danger">* FirstName must be at least 3 characters.</p></h6>
+                                </div>
+                             </div>
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-phone-handset"></span>
+						<input type="text" class="form-control" placeholder="Phone Number" required #email="ngModel"name="mobileno" ngModel>
+					
+					<div class="form-holder">
+						<span class="lnr lnr-envelope"></span>
+						<input type="text" class="form-control" placeholder="Mail" name="email" ngModel >
+						<div *ngIf="email.invalid && (email.dirty || email.untouched)">
+                                <div *ngIf="email.errors.required">
+                                    <h6><p class="text-danger">* Email is required.</p></h6>
+                                </div>
+                                <div *ngIf="email.errors.pattern">
+                                    <h6><p class="text-danger">* Email must be in valid form.</p></h6>
+                                </div>
+                             </div>
+					</div>
+				</div>
+					<div class="form-holder">
+						<span class="lnr lnr-lock"></span>
+						<input type="password" class="form-control" #pass="ngModel" required placeholder="Password" name="password" ngModel>
+							<div *ngIf="pass.invalid && (pass.dirty || pass.untouched)">
+										<div *ngIf="pass.errors.required">
+											<h6><p class="text-danger">* Password is required.</p></h6>
+										</div>
+										<div *ngIf="pass.errors.pattern">
+											<h6><p class="text-danger">* Password must be in valid form.</p></h6>
+										</div>
+									 </div>
+							</div>
+					
+					<div class="form-holder">
+						<span class="lnr lnr-lock"></span>
+						<input type="password" class="form-control" placeholder="Confirm Password" name="cnf" required ngModel #p2="ngModel" pattern="{{pass.value}}">
+						<div *ngIf="p2.invalid && (p2.dirty || p2.untouched)">
+								<div *ngIf="p2.errors.required">
+									<h6><p class="text-danger">* Password is required.</p></h6>
+								</div>
+								<div *ngIf="p2.errors.pattern">
+									<h6><p class="text-danger">* Password must be same as above.</p></h6>
+								</div>
+							 </div>
+					</div>
+					<button>
+						<span>Register</span>
+					</button>
+				</form>
+				<img src="assets/images/image-2.png" alt="" class="image-2">
+			</div>
+			
+		</div>
+		
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
